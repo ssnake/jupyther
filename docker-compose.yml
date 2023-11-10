@@ -4,8 +4,11 @@ services:
     build: .
     volumes:
       - .:/home/jovyan
+      - /home/snake/projects/studytube.nl/backend:/home/jovyan/backend
     user: root
     ports:
       - 8888:8888
     environment:
       - OPENAI_API_KEY
+      - USERNAME
+      - API_KEY
